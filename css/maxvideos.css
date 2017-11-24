@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600');
+Body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #e5e5e5;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+} /* end of body stlying */
+h1, h2, h3, h4, h5, h6, P {
+    margin: 0;
+    padding: 0 24%;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    color: darkgrey;
+    line-height: 1.5em;
+    align-content: center;
+} /* end of hi-h6 and P stlying */
+header {
+    height: 510px;
+    min-width: 100%;
+    position: relative;
+    margin: 0;
+} /* end of header stlying */
+section {
+    height: 100%;
+    width: 100%;
+    background-color: #191919;
+    padding: 3% 7%;
+    margin: 0;
+} /* end of main section stlying */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 4% 0;
+    margin: 0;
+} /* end of footer stlying */
+  /* beginning of header stlying */
+.top-text {   /* header text stlying */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    z-index: 4; /* positioning of topText in front of video and image on all screen size */
+    position: absolute;
+    padding: 8% 0;
+}
+.top-text h1 {
+    color: white;
+    font-size: 3.2em;
+}
+.top-text p {
+    color: #eee;
+    font-style: normal;
+    font-size: 1.5em;
+    font-weight: lighter;
+    line-height: 1.6em;
+}
+.top-text img {
+    height: 25%;
+}
+.top-video-container {  /* header video stlying */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+} 
+video {
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    -webkit-filter: blur(5px) invert(.3);
+    -moz-filter: blur(5px) invert(.3);
+    -o-filter: blur(5px) invert(.3);
+	filter: blur(5px) invert(.3);
+    z-index: 1; /* positioning of video behind topText */
+}
+.top-mobile-image img {
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(1px) invert(.3);
+    -moz-filter: blur(1px) invert(.3);
+    -o-filter: blur(1px) invert(.3);
+    filter: blur(1px) invert(.3);
+    z-index: 0; /* positioning of image behind video on large screen... 
+    ...image not visible on large screen where browser supports video*/
+}
+ /* end of header stlying */
+ /* beginning of section stlying */
+ /* instead of using simple inline-block and removing of the white space between each div container in html, 
+ i decided to float videoBox and use clearfix to contain them */
+#video-list-container:before, 
+#video-list-container:after {
+    content: "";
+    display: table;
+}
+#video-list-container:after {
+    clear: left;
+}
+#video-list-container {
+    clear: left;
+}
+.video-box {   /* universal styling of video box */
+    width: 30%;
+    border: 1em;
+    border-radius: 0.3em;
+    padding-bottom: 1.5%;
+    margin: 1.6%;
+    display: inline;
+    background-color: #333;
+    float: left;
+}
+
+.video-box p {
+    padding: 0 4%;
+}
+.video-box h4 {
+    padding: 0 2%;
+    color: white;
+    font-weight: ;
+    line-height: ;
+}
+.video-box img {
+    overflow: hidden;
+    position: relative;
+    -webkit-border-top-left-radius: 0.3em;
+    -moz-border-top-left-radius: 0.3em;
+    -o-border-top-left-radius: 0.3em;
+    border-top-left-radius: 0.3em;
+    -webkit-border-top-right-radius: 0.3em;
+    -moz-border-top-right-radius: 0.3em;
+    -o-border-top-right-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+}
+.video-box button {
+    color: white;
+    width: 90%;
+    padding: 0.3em;
+    margin-bottom: 0.3em;
+    border: 7.5px solid;
+  	-webkit-border-radius: 0.3em;
+       -moz-border-radius: 0.3em;
+         -o-border-radius: 0.3em;
+            border-radius: 0.3em;
+}
+.color1 button {
+    border-color: cadetblue;
+    background-color: cadetblue;
+}
+.color2 button {
+    border-color: lightblue;
+    background-color: lightblue;
+}
+.color3 button {
+    border-color: blueviolet;
+    background-color: blueviolet;
+}
+/* end of section stlying */
+
+ /* beginning of social links styling in footer */
+.social {
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding-left: 60px;
+    background: url('../images/social-icons2.png') no-repeat; /* One background-image for all the social links */
+}
+a.facebook {
+    background-position: 0 0px; /* facebook icon background position in social-icons */
+}
+a.twitter {
+    background-position: 0 -100px; /* twitter icon background position in social-icons */
+}
+a.instagram {
+    background-position: 0 -200px; /* instagram icon background position in social-icons */
+}
+a.mail {
+    background-position: 0 -300px; /* mail icon background position in social-icons */
+}
+a.facebook:hover {
+    background-position: 0 -50px; /* effect on hover... second facebook icon background position in social-icons */
+}
+a.twitter:hover {
+    background-position: 0 -150px; /* effect on hover... second twitter icon background position in social-icons */
+}
+a.instagram:hover {
+    background-position: 0 -250px; /* effect on hover... second instagram icon background position in social-icons */
+}
+a.mail:hover {
+    background-position: 0 -350px; /* effect on hover... second mail icon background position in social-icons */
+}
+ /* temp deletion...
+.social img {
+	border-width: 2px;
+	border-style: solid;
+	border-color: #191919;
+	border-radius: 50%;
+	padding: 10px;
+}*/
+a:link {  /* more link stlying in footer*/
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: lightgrey;
+}
+a:hover {
+    color: white;
+    text-decoration: dotted;
+}
+a:active {
+    color: lightgrey;
+    background-color: transparent;
+    text-decoration: none;
+} /* end of social link stlying in footer */
+
+/* Video poppup box styling */
+
+/* End of video poppup box styling */
+
+/* Responsiness styling*/
+@media(min-width: 720px) and (max-width: 1263px) {
+    .video-box {
+        width: 46%;
+        border: 1em;
+        border-radius: 0.3em;
+        padding-bottom: 1.5%;
+        margin: 2%;
+        display: inline; 
+        background-color: #3c3c3c;
+        float: left;
+    }
+    h1, h2, h3, h4, h5, h6, P {
+       padding: 0 14%;
+    }
+    .top-mobile-image img {
+        left: 0;
+        right: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2; /* positioning of image in front of video on smaller screen... 
+       ...video should not be visible on smaller screens */
+    }
+    .top-text h1 {
+        margin-top: 1.8em;
+        color: white;
+        font-size: 3.2em;
+    }
+    .top-text p {
+        color: #eee;
+        font-style: normal;
+        font-size: 1.5em;
+        padding: 0 2.2em;
+        font-weight: lighter;
+        line-height: 1.6em;
+    }
+    .top-text img {
+        height: 17%;
+    }
+}
+
+@media(max-width: 719px) {
+    .video-box {
+        width: auto;
+        border: 10em;
+        border-radius: 0.3em;
+        padding-bottom: 1.5%;
+        margin: 4% 2%;
+        display: inline-block; /* display changed to inline-block so that the border and background features would work */
+        background-color: #3c3c3c;
+        float: none; /* I removed float to allow content visible on smaller screens */
+    }
+    h1, h2, h3, h4, h5, h6, P {
+       padding: 0 14%;
+    }
+    .top-mobile-image img {
+       left: 0;
+       right: 0;
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       z-index: 2; /* positioning of image in front of video on smaller screen... 
+       ...video should not be visible on smaller screens */
+   }
+    .top-text h1 {
+        margin-top: 3em;
+        color: white;
+        font-size: 2em;
+    }
+    .top-text p {
+        color: #eee;
+        font-size: 1.3em;
+        margin-top: 1em;
+        padding: 0 0.8em;
+        font-weight: 100;
+        line-height: 1.7em;
+    }
+    .top-text img {
+        height: 13%;
+    }
+}
