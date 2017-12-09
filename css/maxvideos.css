@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600');
+
 Body {
     font-family: 'Source Sans Pro', sans-serif;
     color: #e5e5e5;
@@ -61,7 +63,7 @@ footer {
     line-height: 1.6em;
 }
 .top-text img {
-    height: 25%;
+    height: 21%;
 }
 .top-video-container {  /* header video stlying */
     top: 0;
@@ -166,6 +168,31 @@ video {
 }
 /* end of section stlying */
 
+/* Modal box stlying */
+.modal-dialog {
+    top: 15%;
+}
+.modal-dialog .modal-content {
+    background-color: #000000;
+}
+.modal-body iframe {
+    position: relative;
+    align-content: center;
+}
+
+.modal-content .close {
+        border: 2px solid #ffffff;
+        border-radius: 100%;
+        color: #ffffff;
+        font-size: 15px;
+        position: absolute;
+        right: 0.2%;
+        top: -0.4%;
+        width: 22px; 
+        cursor: pointer;
+        z-index: 1000;
+    } 
+
  /* beginning of social links styling in footer */
 .social {
     height: 50px;
@@ -198,38 +225,57 @@ a.instagram:hover {
 a.mail:hover {
     background-position: 0 -350px; /* effect on hover... second mail icon background position in social-icons */
 }
- /* temp deletion...
-.social img {
-	border-width: 2px;
-	border-style: solid;
-	border-color: #191919;
-	border-radius: 50%;
-	padding: 10px;
-}*/
-a:link {  /* more link stlying in footer*/
+
+/* more link stlying in footer*/
+p a:link {  
     color: lightgrey;
     background-color: transparent;
     text-decoration: none;
 }
-a:visited {
-    color: lightgrey;
-}
-a:hover {
+p a:hover {
     color: white;
-    text-decoration: dotted;
+    border-bottom: 0.1em dotted white;
 }
-a:active {
+p a:active {
     color: lightgrey;
     background-color: transparent;
     text-decoration: none;
-} /* end of social link stlying in footer */
+}
+p a:visited {
+    color: lightgrey;
+}
+/* end of social link stlying in footer */
 
-/* Video poppup box styling */
-
-/* End of video poppup box styling */
 
 /* Responsiness styling*/
-@media(min-width: 720px) and (max-width: 1263px) {
+@media only screen and (min-width: 1264px)  {
+    .modal-content iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1263px)  {
+    .modal-content iframe {
+        width: 100%;
+        height: 380px;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px)  {
+    .modal-content {
+        width: 80%;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 0) and (max-width: 500px)  {
+    .modal-content {
+        width: 85%;
+        height: auto;
+        margin: auto;
+    }
+}
+
+
+@media only screen and (min-width: 720px) and (max-width: 1263px) {
     .video-box {
         width: 46%;
         border: 1em;
@@ -266,11 +312,15 @@ a:active {
         line-height: 1.6em;
     }
     .top-text img {
-        height: 17%;
+        height: 15%;
+    }
+    .modal-body iframe {
+        width: 100%;
+        height: 350px;
     }
 }
 
-@media(max-width: 719px) {
+@media only screen and (max-width: 719px) {
     .video-box {
         width: auto;
         border: 10em;
@@ -307,6 +357,10 @@ a:active {
         line-height: 1.7em;
     }
     .top-text img {
-        height: 13%;
+        height: 11%;
+    }
+    .modal-body iframe {
+        width: 100%;
+        height: 310px;
     }
 }
